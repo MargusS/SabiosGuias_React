@@ -1,0 +1,32 @@
+$headerMaxHeight: 6;
+$headerHeight: 6em;
+
+:export {
+  headerMaxHeight: $headerMaxHeight;
+}
+
+
+.header{
+  position: fixed;
+  background-color: rgba(195, 214, 47, 1);
+  z-index: 1001; //to get over leaflet map.
+}
+
+.header-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100vw;
+  padding: .5em 0 .5em;
+}
+
+.header-logos img {
+  max-height: var(--header-height, $headerHeight);
+  min-height: var(--header-height, $headerHeight);
+}
+
+hr {
+  margin: 0;
+  height: 2px;
+}
