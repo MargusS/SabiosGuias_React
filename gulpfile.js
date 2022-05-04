@@ -29,7 +29,7 @@ function css() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('.'))
-        .pipe( dest('public/css') );
+        .pipe( dest('src/css') );
 }
 
 /*function javascript() {
@@ -66,4 +66,4 @@ function watchArchivos() {
     watch( paths.imagenes, versionWebp );*/
 }
   
-exports.default = parallel(css,watchArchivos,imagenes,versionWebp); 
+exports.default = parallel(css,watchArchivos); 
