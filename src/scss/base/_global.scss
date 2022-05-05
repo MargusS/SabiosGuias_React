@@ -24,15 +24,16 @@ a {
     text-decoration: none;
 }
 
-img,
-picture {
-    width: 100%;
-    display: block;
-}
+// img,
+// picture {
+//     width: 100%;
+//     display: block;
+// }
 
 h1, h2, h3 {
     //font-family: $fuente_principal;
     //margin: $separacion / 2 0;
+    margin: 10em;
     color: red;
     margin: 0;
     font-weight: 300;

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import "./Header.scss";
-import variables from "./Header.scss";
+// import "./Header.scss";
+import '../css/app.css'
+import variables from "../scss/layout/_header.scss";
 
 export default function Header() {
 

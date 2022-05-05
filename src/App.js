@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
+import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import Video360 from "./pages/Video360";
 import AllRoutes from "./pages/AllRoutes";
 import RouteDetail from "./pages/RouteDetail";
