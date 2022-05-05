@@ -3,7 +3,7 @@
 
 
 /** Media Queries **/
-@mixin telefono {
+@mixin phone {
     @media (min-width: #{var.$phone}) {
         @content;
     }

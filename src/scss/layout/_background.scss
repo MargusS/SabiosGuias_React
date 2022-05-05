@@ -1,0 +1,67 @@
+@use '../base/mixins' as mix;
+
+.carousel-mb{
+    .overlay{
+        position: absolute;
+        background-color: rgb(0, 0, 0, .4);
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+    }
+    img{
+        width: 100vw;
+        height: 100vh;
+    }
+    @include mix.desktop{
+        display: none;
+    }
+}
+
+.carousel-dp{
+    display: none;
+    @include mix.desktop{
+        display: block;
+        .overlay{
+            position: absolute;
+            background-color: rgb(0, 0, 0, .4);
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+        img{
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+}
+
+.carousel{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    ul{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        width: 400%;
+
+        animation: change 20s infinite ease;
+    }
+
+    li{
+        width: 100;
+        list-style: none;
+    }
+}
+
+
+@keyframes change{
+    0%{margin-left: 0;}
+    15%{margin-left: 0;}
+
+    40%{margin-left: -100%;}
+    55%{margin-left: -100%;}
+
+    80%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
