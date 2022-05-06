@@ -7,7 +7,7 @@ export default function MobileBg() {
           <ul>
             <li>
               <picture>
-                <source srcset="/img/bg_mujer_mov.webp" type="image/webp" />
+                <source srcSet="/img/bg_mujer_mov.webp" type="image/webp" />
                 <img
                   width="200"
                   height="300"
@@ -18,7 +18,7 @@ export default function MobileBg() {
             </li>
             <li>
               <picture>
-                <source srcset="/img/bg_hombre_mov.webp" type="image/webp" />
+                <source srcSet="/img/bg_hombre_mov.webp" type="image/webp" />
                 <img
                   width="200"
                   height="300"
@@ -29,7 +29,7 @@ export default function MobileBg() {
             </li>
             <li>
               <picture>
-                <source srcset="/img/bg_grupo_mov.webp" type="image/webp" />
+                <source srcSet="/img/bg_grupo_mov.webp" type="image/webp" />
                 <img
                   width="200"
                   height="300"

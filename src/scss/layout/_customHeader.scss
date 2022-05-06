@@ -1,0 +1,57 @@
+@use '../base/mixins' as mix;
+
+.custom-header{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+
+    @include mix.tablet{
+        display: block;
+    }
+}
+
+.custom-header-elements{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em ;
+
+    img{
+        width: auto;
+        height: 8em;
+    }
+
+    .menu{
+        width: auto;
+        height: 4em;
+        @include mix.tablet{
+            display: none;
+        }
+    }
+
+    @include mix.desktop{
+        flex-direction: row;
+        padding: .5em;
+        background-color: rgb(255, 255, 255,.8);
+    }
+    
+}
+
+.items{
+    display: none;
+
+     @include mix.desktop{
+        width: 100% ;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 70em;
+        h3{
+            cursor: pointer;
+        }
+    }
+}

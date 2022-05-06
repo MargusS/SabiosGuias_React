@@ -7,7 +7,7 @@ export default function DesktopBg() {
           <ul>
             <li>
               <picture>
-                <source srcset="/img/bg_1.webp" type="image/webp" />
+                <source srcSet="/img/bg_1.webp" type="image/webp" />
                 <img
                   width="200"
                   height="300"
@@ -18,7 +18,7 @@ export default function DesktopBg() {
             </li>
             <li>
               <picture>
-                <source srcset="/img/bg_2.webp" type="image/webp" />
+                <source srcSet="/img/bg_2.webp" type="image/webp" />
                 <img
                   width="200"
                   height="300"
@@ -29,7 +29,7 @@ export default function DesktopBg() {
             </li>
             <li>
               <picture>
-                <source srcset="/img/bg_3.webp" type="image/webp" />
+                <source srcSet="/img/bg_3.webp" type="image/webp" />
                 <img
                   width="200"
                   height="300"

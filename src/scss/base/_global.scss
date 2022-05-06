@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -24,19 +26,13 @@ a {
     text-decoration: none;
 }
 
-// img,
-// picture {
-//     width: 100%;
-//     display: block;
-// }
 
 h1, h2, h3 {
-    //font-family: $fuente_principal;
-    //margin: $separacion / 2 0;
+    font-family: var.$fuente_principal;
     margin: 10em;
-    color: red;
+    color: black;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     
 }
