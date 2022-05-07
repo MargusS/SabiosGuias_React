@@ -1,6 +1,6 @@
 @use '../base/mixins' as mix;
 
-.custom-header{
+.custom-header {
     position: fixed;
     width: 100vw;
     top: 0;
@@ -9,83 +9,94 @@
     display: flex;
     justify-content: center;
 
-    @include mix.tablet{
+    @include mix.tablet {
         display: block;
     }
 }
 
-.custom-header-elements{
+.custom-header-elements {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em ;
+    padding: 1em;
 
-    .logo{
+    .logo {
         width: auto;
-        height: 8em;
+        height: 9.5em;
     }
 
-    .menu{
+    .menu {
         cursor: pointer;
+        margin-top: 1em;
         width: auto;
-        height: 4em;
-        @include mix.tablet{
+        height: 3.5em;
+
+        @include mix.desktop {
             display: none;
         }
     }
 
-    @include mix.desktop{
+    @include mix.desktop {
         flex-direction: row;
         padding: .5em;
-        background-color: rgb(255, 255, 255,.8);
-        img{
+        background-color: rgb(255, 255, 255, .8);
+
+        .logo {
             width: auto;
             height: 6em;
         }
     }
-    
+
 }
 
-.items{
-    position: absolute;
-    top: 125%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    h3{
-        margin: .3em 0;
-        cursor: pointer;
-    }
+.items-header {
+    display: none;
 
-    @include mix.desktop{
-        position: relative;
-        visibility: visible;
-        width: 100% ;
+    @include mix.desktop {
+        display: flex;
+        width: 100%;
         flex-direction: row;
         justify-content: end;
-        h3{
-            margin: 0 1em;
-            color: black;
-            font-size: 2.2;
+
+        h3 {
+            margin: 0 2em;
+            font-size: 2.4rem;
         }
     }
 }
 
-.overlay-menu{
+.overlay-menu {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 255, 255,.7);
+    background-color: rgb(255, 255, 255, .7);
     display: flex;
     justify-content: center;
-    .logo{
-        padding: 1em 2em;
-        width: 100%;
-        height: 30%;
+
+    .logo {
+        padding: 1em 5em;
+        width: auto;
+        height: 11.5em;
     }
-    @include mix.desktop{
+
+    @include mix.desktop {
         display: none;
     }
+}
+
+.items-overlay {
+    position: absolute;
+    top: 15em;
+
+    h3 {
+        margin: .3em 0;
+        cursor: pointer;
+    }
+}
+
+.bt-close {
+    cursor: pointer;
+    position: absolute;
+    top: 25em;
 }

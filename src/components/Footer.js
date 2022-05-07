@@ -10,7 +10,7 @@ export default function Footer() {
           <img src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
         </div>
         <hr />
-        <div className="cookies">legal • Política de privacidad • Política de cookies</div>
+        <div className="cookies">Legal • Política de privacidad • Política de cookies</div>
       </footer>
     </>
   );
