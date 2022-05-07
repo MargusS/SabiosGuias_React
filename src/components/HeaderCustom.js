@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { itemsMenu } from "./itemsMenu";
 import { useNavigate } from "react-router-dom";
+import OverlayMenu from "./OverlayMenu";
 
 export default function HeaderCustom() {
 
   const navigate = useNavigate();
-  const [visible, setVisible] = useState("item-visible");
+  const [overlay, setOverlay] = useState(false);
+
+  useEffect(() => {
+    if (overlay) {
+      document.getElementById("al").style.visibility = "visible";
+      document.getElementById("el").style.visibility = "hidden";
+      setOverlay(!overlay);
+    }
+  });
 
   const handleVisible = () => {
-    setVisible(visible == "item-visible" ? "item-unvisible" : "item-visible");
+    setOverlay(!overlay);
   }
 
   const showItems = (item, index) => {
@@ -19,22 +28,12 @@ export default function HeaderCustom() {
 
   return (
     <>
-      <div className="custom-header">
-        <div className={`overlay-menu ${visible == "item-visible" ? "item-unvisible" : "item-visible"}`}>
-          <img className="logo" width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
-          <div className={`items-overlay ${visible == "item-visible" ? "item-unvisible" : "item-visible"}`}>
-            {
-              itemsMenu.map(showItems)
-            }
-          </div>
-          <div onClick={handleVisible} className="bt-close">
-            <h3>X</h3>
-          </div>
-        </div>
+      <div id="el" className="custom-header">
+        <OverlayMenu />
         <div className="custom-header-elements">
-          <img className={`logo ${visible}`} width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
-          <img onClick={handleVisible} className={`menu ${visible}`} width="200" height="300" src="/img/menu_mov.png" alt="Burger Menu" />
-          <div className={`items-header ${visible == "item-visible" ? "item-unvisible" : "item-visible"}`}>
+          <img className="logo" width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
+          <img onClick={handleVisible} className="menu" width="200" height="300" src="/img/menu_mov.png" alt="Burger Menu" />
+          <div className="items-header">
             {
               itemsMenu.map(showItems)
             }
