@@ -5,7 +5,7 @@
     width: 100vw;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 104;
     display: flex;
     justify-content: center;
 
@@ -58,6 +58,7 @@
         width: 100%;
         flex-direction: row;
         justify-content: end;
+        cursor: pointer;
 
         h3 {
             margin: 0 2em;

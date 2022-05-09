@@ -1,0 +1,36 @@
+@use '../base/mixins' as mix;
+
+.section{
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 103;
+    @include mix.desktop{
+        display: block;
+    }
+}
+.section-elements{
+    display: flex;
+}
+
+.section-element{
+    background-color: rgb(255, 255, 255,.5);
+    border-radius: 1em;
+    margin: 12em 1em 0 1em;
+    padding: 1.5em;
+}
+
+.section-images{
+    text-align: center;
+    img{
+        width: 15em;
+    }
+}
+
+.section-info{
+    text-align: center;
+    p{
+        font-size: 1em;
+        color: black;
+    }
+}
