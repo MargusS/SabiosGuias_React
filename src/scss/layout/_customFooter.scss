@@ -1,0 +1,84 @@
+@use '../base/mixins' as mix;
+
+.custom-footer {
+    background-color: rgb(255, 255, 255, .7);
+    padding: 1em 0;
+    width: 100%;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    @include mix.desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 15vh;
+
+        hr {
+            height: 4.5em;
+            width: .2em;
+            margin: 0 .5em;
+            background-color: black;
+        }
+    }
+
+}
+
+.items-footer {
+    padding: .3em;
+    cursor: pointer;
+
+    h3 {
+        font-size: medium;
+        margin: .1em 0;
+    }
+
+    @include mix.desktop {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+
+        h3 {
+            font-weight: 300;
+            font-size: 1.6em;
+            margin: .1em 0em;
+        }
+    }
+
+
+
+}
+
+.custom-footer-logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: .3em;
+
+    img {
+        width: auto;
+        height: 3em;
+    }
+
+    @include mix.desktop {
+        width: 50%;
+
+        img {
+            width: auto;
+            height: 5em;
+        }
+    }
+
+}
+
+.policies {
+    padding-top: .5em;
+
+    @include mix.desktop {
+        text-align: center;
+        width: 25%;
+        padding: 0 2em;
+
+    }
+}

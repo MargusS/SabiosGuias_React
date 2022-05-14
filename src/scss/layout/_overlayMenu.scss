@@ -1,0 +1,39 @@
+@use '../base/mixins' as mix;
+
+.overlay-menu {
+    visibility: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255, .7);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    .logo {
+        padding: 1em 5em;
+        width: auto;
+        height: 11.5em;
+        overflow: hidden;
+    }
+
+    @include mix.desktop {
+        display: none;
+    }
+}
+
+.items-overlay {
+    position: absolute;
+    top: 15em;
+
+    h3 {
+        margin: .3em 0;
+        cursor: pointer;
+    }
+}
+
+.bt-close {
+    cursor: pointer;
+    position: absolute;
+    top: 25em;
+}
