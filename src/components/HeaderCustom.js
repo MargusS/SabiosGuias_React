@@ -12,6 +12,8 @@ export default function HeaderCustom() {
     if (overlay) {
       document.getElementById("al").style.visibility = "visible";
       document.getElementById("el").style.visibility = "hidden";
+      document.getElementById("ul").style.display = "none";
+      document.getElementById("ol").style.display = "none";
       setOverlay(!overlay);
     }
   });

@@ -1,9 +1,10 @@
 import { infoRoutes } from "../components/infoRoutes";
-import Footer from "../components/Footer";
-import "./AllRoutes.css";
 import ScrollToTop from "../components/ScrollToTop";
-import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
+import { infoSabios } from "../components/infoSabios";
+import FooterCustom from "../components/FooterCustom";
+import HeaderCustom from "../components/HeaderCustom";
+import "../css/app.css";
 
 export default function AllRoutes() {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ export default function AllRoutes() {
   return (
     <>
       <ScrollToTop />
-      <Header />
+      {/* <Header /> */}
+      <HeaderCustom />
       <div className="all-routes-container">
         <div>
           <h1 className="all-routes-title">Rutas</h1>
@@ -36,7 +38,7 @@ export default function AllRoutes() {
           }
         </div>
       </div>
-      <Footer />
+      <FooterCustom />
     </>
   );
 }

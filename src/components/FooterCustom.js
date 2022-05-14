@@ -13,7 +13,7 @@ export default function FooterCustom() {
 
     return (
         <>
-            <div className="custom-footer">
+            <div id="ol" className="custom-footer">
                 <div className="custom-footer-logos">
                     <img width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
                     <img width="200" height="300" src="/img/LogoIESElRincon-transparent.png" alt="Sabios Guías Intérpretes" />
@@ -26,7 +26,9 @@ export default function FooterCustom() {
                     }
                 </div>
                 <hr />
-                <div className="policies">Legal • Política de privacidad • Política de cookies</div>
+                <div className="policies">
+                    <p>Legal • Política de privacidad • Política de cookies</p>
+                </div>
             </div>
         </>
     );

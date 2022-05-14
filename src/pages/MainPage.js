@@ -14,17 +14,17 @@ export default function MainPage() {
 
     return (
         <>
-            <MobileBg />
-            <DesktopBg />
             <HeaderCustom />
-            <div className="section">
+            <div id="ul" className="section">
                 <div className="section-elements">
                     {
-                        infoSabios.map((item) => <InfoSlider image={item.img} info={item.text}/>)
+                        infoSabios.map((item) => <InfoSlider image={item.img} info={item.text} />)
                     }
                 </div>
             </div>
             <FooterCustom />
+            <MobileBg />
+            <DesktopBg />
         </>
     )
 }

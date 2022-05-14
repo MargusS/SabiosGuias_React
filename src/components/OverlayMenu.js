@@ -11,6 +11,8 @@ export default function OverlayMenu() {
         if (!overlay) {
             document.getElementById("el").style.visibility = "visible";
             document.getElementById("al").style.visibility = "hidden";
+            document.getElementById("ol").style.display = "flex";
+            document.getElementById("ul").style.display = "flex";
             setOverlay(!overlay);
         }
     });
