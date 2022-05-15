@@ -45,7 +45,7 @@ export default function RouteDetail() {
     <>
       <ScrollToTop />
       <HeaderCustom />
-      <div className="route-detail-outer-container">
+      <div id="ul" className="route-detail-outer-container">
         {
           showRoute(infoRoutes[id])
         }

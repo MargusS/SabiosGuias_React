@@ -15,9 +15,15 @@ export default function FooterCustom() {
         <>
             <div id="ol" className="custom-footer">
                 <div className="custom-footer-logos">
-                    <img width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
-                    <img width="200" height="300" src="/img/LogoIESElRincon-transparent.png" alt="Sabios Guías Intérpretes" />
-                    <img width="200" height="300" src="/img/San-Cristobal-CIFP.logo_.png" alt="Sabios Guías Intérpretes" />
+                    <a href="https://www.sabiosguiasinterpretes.com/">
+                        <img width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
+                    </a>
+                    <a href="https://www3.gobiernodecanarias.org/medusa/edublog/ieselrincon/">
+                        <img width="200" height="300" src="/img/LogoIESElRincon-transparent.png" alt="Sabios Guías Intérpretes" />
+                    </a>
+                    <a href="https://cifpsancristobal.org/">
+                        <img width="200" height="300" src="/img/San-Cristobal-CIFP.logo_.png" alt="Sabios Guías Intérpretes" />
+                    </a>
                 </div>
                 <hr />
                 <div className="items-footer">
