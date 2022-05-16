@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { infoSabios } from "../components/infoSabios";
 import DesktopBg from "../components/DesktopBg";
 import FooterCustom from "../components/FooterCustom";
@@ -9,8 +8,6 @@ import "../css/app.css";
 
 
 export default function MainPage() {
-
-    const navigate = useNavigate();
 
     return (
         <>

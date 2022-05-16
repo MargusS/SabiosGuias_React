@@ -2,23 +2,22 @@
 
 .custom-header {
     position: relative;
-    width: 100vw;
-    height: 30vh;
+    width: 100%;
+    height: 17em;
     z-index: 104;
     display: flex;
     justify-content: center;
-
+    box-shadow: 0em .1em .5em rgb(135, 150, 22);
+    background-color: rgb(255, 255, 255, .8);
 
     @include mix.desktop {
         display: block;
         position: fixed;
         top: 0;
-        width: 100vw;
         height: 15vh;
         z-index: 104;
         display: flex;
         justify-content: center;
-        overflow: hidden;
     }
 }
 
@@ -30,6 +29,7 @@
     padding: 1em;
 
     .logo {
+        cursor: pointer;
         width: auto;
         height: 9.5em;
     }
