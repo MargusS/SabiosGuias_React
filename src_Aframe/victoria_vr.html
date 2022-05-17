@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Victoria VR</title>
+    <link rel="stylesheet" href="css/min.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="js/components/change_site.js"></script>
+    <script src="js/components/view_info.js"></script>
+    <script src="js/components/toggle_sound.js"></script>
+    <script src="js/components/draw_canvas.js"></script>
+</head>
+
+<body>
+
+    <!-- <div class="sound-container position-fixed text-center">
+        <button id="sound-button" class="rounded-circle">
+            <img id="sound-img" class="w-75 h-auto" src="img/icons/sound-off.png" alt="sound">
+        </button>
+    </div> -->
+
+    <a-scene>
+        <a-assets>
+            <canvas id="my-canvas" width="350" height="350"></canvas>
+            <audio id="ambient" src="sounds/victoria.wav" preload="auto"></audio>
+            <audio id="go" src="sounds/go.wav" preload="auto"></audio>
+            <audio id="info-sound" src="sounds/info.wav" preload="auto"></audio>
+            <img id="victoria-club" src="img/victoria_club.jpg">
+            <img id="cast-icon" src="img/icons/cast.jpeg">
+            <img id="escobio-icon" src="img/icons/old.jpg">
+            <img id="info" src="img/icons/info.png">
+            <img id="close" src="img/icons/close.png">
+        </a-assets>
+
+        <a-camera>
+            <a-cursor color="white" raycaster="objects: .clickable"></a-cursor>
+        </a-camera>
+
+        <a-entity>
+            <a-entity position="-1.5 2 -5" rotation="0 -20 0"
+                animation="property: rotation; dir: alternate; to: 0 40 0; loop: true; dur: 2500">
+                <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="#ff6868"></a-circle>
+                <a-circle visible="true" src="#cast-icon" color="white" scale="1 1 1" width="3" height=".5"
+                    class="clickable" change-site="url: castillo_vr.html" sound="on: mouseenter; src: #go">
+                </a-circle>
+                <a-plane position="0 -.1 0.01" color="#ff6868" width="1.4" height="0.3">
+                    <a-text value="Castillo de la Luz " width="3.5" align="center"></a-text>
+                </a-plane>
+            </a-entity>
+            <a-entity position="0 1.5 5" rotation="0 140 0"
+                animation="property: rotation; dir: alternate; to: 0 210 0; loop: true; dur: 2500">
+                <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="#ff6868"></a-circle>
+                <a-circle visible="true" src="#escobio-icon" class="clickable" change-site="url: escobio_vr.html"
+                    sound="on: mouseenter; src: #go">
+                </a-circle>
+                <a-plane position="0 0 0.01" color="#ff6868" width="1.4" height="0.3">
+                    <a-text value="Fabrica Escobio" width="3.5" align="center"></a-text>
+                </a-plane>
+            </a-entity>
+        </a-entity>
+
+        <a-entity>
+            <a-circle src="#info" class="clickable" position="3.5 1.9 -.3" rotation="0 -70 0" scale=".25 .25 .25"
+                view-info sound="on: mouseenter; src: #info-sound"></a-circle>
+            <a-entity id="info-menu" visible="false">
+                <a-plane material="#my-canvas" position="5.5 2 2" width="3.8" height="3" rotation="0 -105 -2"
+                    draw-canvas="pos: 2"></a-plane>
+            </a-entity>
+        </a-entity>
+
+
+        <a-sky id="my-sky" src="#victoria-club" sound="src: #ambient; loop: true"></a-sky>
+    </a-scene>
+</body>
+
+</html>
