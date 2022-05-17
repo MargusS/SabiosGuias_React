@@ -11,10 +11,16 @@
     overflow: hidden;
 
     .logo {
-        padding: 1em 0em;
-        width: auto;
-        height: 11.5em;
+        margin-top: 1em;
+        width: 100%;
         overflow: hidden;
+        text-align: center;
+
+        // height: 9.5em;
+        img {
+            width: auto;
+            height: 7em;
+        }
     }
 
     @include mix.desktop {

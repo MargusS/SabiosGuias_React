@@ -1,6 +1,10 @@
 @use '../base/mixins' as mix;
 
 .custom-footer {
+    width: 100%;
+}
+
+.footer-elements {
     background-color: rgb(255, 255, 255, .7);
     padding: 1em 0;
     width: 100%;
@@ -24,7 +28,6 @@
             background-color: black;
         }
     }
-
 }
 
 .items-footer {

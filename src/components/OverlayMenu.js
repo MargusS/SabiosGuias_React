@@ -30,7 +30,9 @@ export default function OverlayMenu() {
     return (
         <>
             <div id="al" className="overlay-menu">
-                <img className="logo" width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
+                <div className="logo">
+                    <img width="200" height="300" src="/img/LogoSabiosGuias.png" alt="Sabios Guías Intérpretes" />
+                </div>
                 <div className="items-overlay">
                     {
                         itemsMenu.map(showItems)
