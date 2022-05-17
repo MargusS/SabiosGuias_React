@@ -1,3 +1,7 @@
+.route-detail-id {
+  border-radius: .6em;
+}
+
 .leaflet-container {
   margin-top: 2em;
   width: calc(100vw - 4em);

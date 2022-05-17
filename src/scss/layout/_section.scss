@@ -1,21 +1,25 @@
 @use '../base/mixins' as mix;
 
 .section {
-    position: relative;
+    // position: relative;
+    width: 100%;
     z-index: 103;
     display: flex;
+    margin: 2em auto;
 
     @include mix.desktop {
         align-items: center;
         height: 70vh;
         margin-top: 15vh;
+        margin-bottom: 0;
     }
 }
 
 .section-elements {
     display: flex;
     flex-direction: column;
-    margin: 2em 0;
+    width: 95%;
+    margin: 0 auto;
 
     @include mix.desktop {
         flex-direction: row;
@@ -26,12 +30,13 @@
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 1em;
     margin: 1em 1em;
-    padding: 1.5em;
+    // padding: 1.5em;
 
 }
 
 .section-images {
     text-align: center;
+    padding-top: 1em;
 
     img {
         width: 15em;
@@ -47,6 +52,7 @@
 
 .section-info {
     text-align: center;
+    padding: 1.5em;
 
     p {
         font-size: 1em;
