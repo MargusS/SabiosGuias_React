@@ -47,17 +47,17 @@ export const infoRoutes = [
     stops: [
       {
         idStop: 1,
-        name: "Juan Rejón",
+        name: "Oficina de Turismo",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
         nextPortal: [
           {
             visible: "true",
-            position: "-5 1.7 2.2",
+            position: "-7 1.7 2.2",
             animation: "0 150 0",
             rotation: "0 90 0",
-            titleStop: "Castillo de la Luz",
+            titleStop: "Gofio",
           }
         ],
         prevPortal: [
@@ -72,17 +72,17 @@ export const infoRoutes = [
 
       }, {
         idStop: 2,
-        name: "Castillo de la Luz",
+        name: "Gofio",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
         nextPortal: [
           {
             visible: "true",
-            position: "-5 2 -1.5",
+            position: "-3 -2 1",
             animation: "0 110 0",
-            rotation: "0 50 0",
-            titleStop: "Club Victoria",
+            rotation: "-90 90 0",
+            titleStop: "Premios",
           }
         ],
         prevPortal: [
@@ -91,12 +91,12 @@ export const infoRoutes = [
             position: "5 1.8 -2",
             animation: "0 -45 0",
             rotation: "0 -125 0",
-            titleStop: "Juan Rejon",
+            titleStop: "Oficina de Turismo",
           }
         ]
       }, {
         idStop: 3,
-        name: "Club Victoria",
+        name: "Premios",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
@@ -106,7 +106,7 @@ export const infoRoutes = [
             position: "-5 2 -1.5",
             animation: "0 110 0",
             rotation: "0 50 0",
-            titleStop: "Fabrica Escobio",
+            titleStop: "Entrada al barranco",
           }
         ],
         prevPortal: [
@@ -115,12 +115,12 @@ export const infoRoutes = [
             position: "5 1.8 -2",
             animation: "0 -45 0",
             rotation: "0 -125 0",
-            titleStop: "Castillo de la Luz",
+            titleStop: "Gofio",
           }
         ]
       }, {
         idStop: 4,
-        name: "Fabrica Escobio",
+        name: "Entrada al barranco",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
@@ -139,7 +139,7 @@ export const infoRoutes = [
             position: "5 1.8 -2",
             animation: "0 -45 0",
             rotation: "0 -125 0",
-            titleStop: "Club Victoria",
+            titleStop: "Premios",
           }
         ]
       }
