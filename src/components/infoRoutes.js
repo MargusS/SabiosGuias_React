@@ -41,41 +41,76 @@ export const infoRoutes = [
   }, {
     id: 2,
     color: "rgb(16, 126, 115)",
-    name: "Alemán",
-    description: "Ruta por Las Palmas de GC teniendo en cuenta los siguientes puntos de interés: (1) Entrada a la guagua, (2) Teatro y Mercado, (3) Plaza del Rosario, (4) Casa de los Camellos y (5) Casa de la cámara episcopal",
+    name: "La Isleta",
+    description: "Ruta por el antigüo barrio de La Isleta teniendo en cuenta los siguientes puntos de interés: (1) Juan Rejón, (2) Castillo de la Luz, (3) Club Victoria y (4) Fábrica Escobio",
     music: "",
     stops: [
       {
         idStop: 1,
-        name: "Entrada a la guagua",
+        name: "Juan Rejón",
         description: "",
         video: "",
-        location: [27.9086217, -15.3886205]
+        location: [28.148989336012654, -15.42077263372809],
+        nextPortal: [
+          {
+            visible: "true",
+            position: "-5 1.7 2.2",
+            animation: "0 150 0",
+            rotation: "0 90 0",
+            titleStop: "Castillo de la Luz",
+            event: "mouseenter"
+          }
+        ],
+        prevPortal: [
+          {
+            visible: "false",
+            position: "",
+            animation: "",
+            rotation: "",
+            titleStop: "",
+            event: "collide"
+          }
+        ]
+
       }, {
         idStop: 2,
-        name: "Iglesia",
+        name: "Castillo de la Luz",
         description: "",
         video: "",
-        location: [27.9560056, -15.4518982]
+        location: [28.148989336012654, -15.42077263372809],
+        nextPortal: [
+          {
+            visible: "true",
+            position: "-5 2 -1.5",
+            animation: "0 110 0",
+            rotation: "0 50 0",
+            titleStop: "Club Victoria",
+            event: `{{ mouseenter: (e) => handleClick(1) }}`
+          }
+        ],
+        prevPortal: [
+          {
+            visible: "true",
+            position: "5 1.8 -2",
+            animation: "0 -45 0",
+            rotation: "0 -125 0",
+            titleStop: "Juan Rejon",
+            event: "mouseenter"
+          }
+        ]
       }, {
         idStop: 3,
-        name: "Plaza del Rosario",
+        name: "Club Victoria",
         description: "",
         video: "",
-        location: [27.9560056, -15.4518982]
+        location: [28.148989336012654, -15.42077263372809]
       }, {
         idStop: 4,
-        name: "Casa de los Camellos",
+        name: "Fábrica Escobio",
         description: "",
         video: "",
-        location: [27.9560056, -15.4518982]
-      }, {
-        idStop: 5,
-        name: "Casa de la cámara episcopal",
-        description: "",
-        video: "",
-        location: [27.9560056, -15.4518982]
-      },
+        location: [28.148989336012654, -15.42077263372809]
+      }
     ]
   }, {
     id: 3,
