@@ -58,17 +58,15 @@ export const infoRoutes = [
             animation: "0 150 0",
             rotation: "0 90 0",
             titleStop: "Castillo de la Luz",
-            event: "mouseenter"
           }
         ],
         prevPortal: [
           {
             visible: "false",
-            position: "",
+            position: "3 1.7 2.2",
             animation: "",
             rotation: "",
             titleStop: "",
-            event: "collide"
           }
         ]
 
@@ -85,7 +83,6 @@ export const infoRoutes = [
             animation: "0 110 0",
             rotation: "0 50 0",
             titleStop: "Club Victoria",
-            event: `{{ mouseenter: (e) => handleClick(1) }}`
           }
         ],
         prevPortal: [
@@ -95,7 +92,6 @@ export const infoRoutes = [
             animation: "0 -45 0",
             rotation: "0 -125 0",
             titleStop: "Juan Rejon",
-            event: "mouseenter"
           }
         ]
       }, {
@@ -103,13 +99,49 @@ export const infoRoutes = [
         name: "Club Victoria",
         description: "",
         video: "",
-        location: [28.148989336012654, -15.42077263372809]
+        location: [28.148989336012654, -15.42077263372809],
+        nextPortal: [
+          {
+            visible: "true",
+            position: "-5 2 -1.5",
+            animation: "0 110 0",
+            rotation: "0 50 0",
+            titleStop: "Fabrica Escobio",
+          }
+        ],
+        prevPortal: [
+          {
+            visible: "true",
+            position: "5 1.8 -2",
+            animation: "0 -45 0",
+            rotation: "0 -125 0",
+            titleStop: "Castillo de la Luz",
+          }
+        ]
       }, {
         idStop: 4,
-        name: "Fábrica Escobio",
+        name: "Fabrica Escobio",
         description: "",
         video: "",
-        location: [28.148989336012654, -15.42077263372809]
+        location: [28.148989336012654, -15.42077263372809],
+        nextPortal: [
+          {
+            visible: "false",
+            position: "3 1.7 2.2",
+            animation: "",
+            rotation: "",
+            titleStop: "",
+          }
+        ],
+        prevPortal: [
+          {
+            visible: "true",
+            position: "5 1.8 -2",
+            animation: "0 -45 0",
+            rotation: "0 -125 0",
+            titleStop: "Club Victoria",
+          }
+        ]
       }
     ]
   }, {

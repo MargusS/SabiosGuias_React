@@ -37,8 +37,8 @@ function Video360() {
 
       <Scene cursor={{ rayOrigin: "mouse" }}>
         <a-assets>
-          <img id="img" src={`/video/Route-${route}/Route-${route}-Stop-${current}.jpg`}></img>
-          {/* <video id="vid" loop={true} src={`/video/Route-${route}/Route-${route}-Stop-${current}.mp4`} autoPlay={true} > </video> */}
+          {/* <video id="vid" src={`/video/Route-${route}/Route-${route}-Stop-${current}.mp4`}></video> */}
+          <video id="vid" loop={true} src={`/video/Route-${route}/Route-${route}-Stop-${current}.mp4`} autoPlay={true} > </video>
         </a-assets>
 
         <a-camera>
@@ -46,7 +46,7 @@ function Video360() {
         </a-camera>
 
         <a-entity visible={infoNextPortal['visible']} position={infoNextPortal['position']} rotation={infoNextPortal['rotation']}
-          animation="property: rotation; dir: alternate; to: `{infoNextPortal['animation']}`; loop: true; dur: 2500">
+          animation={`property: rotation; dir: alternate; to: ${infoNextPortal['animation']}; loop: true; dur: 2500`}>
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="#ff6868"></a-circle>
           <Entity primitive="a-circle" color="green" events={{ mouseenter: (e) => handleClick(1) }} />
           <a-plane position="-0.1 -.1 0.05" color="#ff6868" width="1.4" height="0.3">
@@ -55,16 +55,16 @@ function Video360() {
         </a-entity>
 
         <a-entity visible={infoPrevPortal['visible']} position={infoPrevPortal['position']} rotation={infoPrevPortal['rotation']}
-          animation="property: rotation; dir: alternate; to:`{infoPrevPortal['animation']}`; loop: true; dur: 2500">
+          animation={`property: rotation; dir: alternate; to: ${infoPrevPortal['animation']}; loop: true; dur: 2500`}>
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="#ff6868"></a-circle>
-          {/* <Entity visible={infoPrevPortal['visible']} primitive="a-circle" color="green" events={{ mouseenter: (e) => handleClick(-1) }} /> */}
+          { <Entity visible={infoPrevPortal['visible']} primitive="a-circle" color="green" events={{ mouseenter: (e) => handleClick(-1) }} /> }
           <a-plane position="-0.1 -.1 0.05" color="#ff6868" width="1.4" height="0.3">
             <a-text value={infoPrevPortal['titleStop']} width="3.5" align="center"></a-text>
           </a-plane>
         </a-entity>
 
         {/* <a-videosphere src="#vid"></a-videosphere> */}
-        <a-sky id="my-sky" src="#img"></a-sky>
+        <a-sky id="vid" src="#vid"></a-sky>
       </Scene>
     </div >
   );
