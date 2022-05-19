@@ -1,11 +1,9 @@
 import { infoRoutes } from "../components/infoRoutes";
 import ScrollToTop from "../components/ScrollToTop";
 import { useNavigate } from "react-router-dom";
-import { infoSabios } from "../components/infoSabios";
 import DesktopBg from "../components/DesktopBg";
 import FooterCustom from "../components/FooterCustom";
 import HeaderCustom from "../components/HeaderCustom";
-import InfoSlider from "../components/InfoSlider";
 import MobileBg from "../components/MobileBg";
 import "../css/app.css";
 
