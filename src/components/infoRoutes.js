@@ -47,26 +47,26 @@ export const infoRoutes = [
     stops: [
       {
         idStop: 1,
-        name: "Oficina de Turismo",
+        name: "Oficina",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
-        nextPortal: [
+        visibilities: [
           {
-            visible: "true",
-            position: "-7 1.7 2.2",
-            animation: "0 150 0",
-            rotation: "0 90 0",
-            titleStop: "Gofio",
+            visible1: "true",
+            visible2: "false",
+            visible3: "false",
+            visible4: "false",
           }
         ],
         prevPortal: [
           {
             visible: "false",
-            position: "3 1.7 2.2",
+            position: "",
             animation: "",
             rotation: "",
             titleStop: "",
+            event: "collide"
           }
         ]
 
@@ -76,13 +76,12 @@ export const infoRoutes = [
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
-        nextPortal: [
+        visibilities: [
           {
-            visible: "true",
-            position: "-3 -2 1",
-            animation: "0 110 0",
-            rotation: "-90 90 0",
-            titleStop: "Premios",
+            visible1: "false",
+            visible2: "true",
+            visible3: "false",
+            visible4: "false",
           }
         ],
         prevPortal: [
@@ -91,7 +90,8 @@ export const infoRoutes = [
             position: "5 1.8 -2",
             animation: "0 -45 0",
             rotation: "0 -125 0",
-            titleStop: "Oficina de Turismo",
+            titleStop: "Juan Rejon",
+            event: "mouseenter"
           }
         ]
       }, {
@@ -100,48 +100,28 @@ export const infoRoutes = [
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
-        nextPortal: [
+        visibilities: [
           {
-            visible: "true",
-            position: "-5 2 -1.5",
-            animation: "0 110 0",
-            rotation: "0 50 0",
-            titleStop: "Entrada al barranco",
+            visible1: "false",
+            visible2: "false",
+            visible3: "true",
+            visible4: "false",
           }
         ],
-        prevPortal: [
-          {
-            visible: "true",
-            position: "5 1.8 -2",
-            animation: "0 -45 0",
-            rotation: "0 -125 0",
-            titleStop: "Gofio",
-          }
-        ]
       }, {
         idStop: 4,
         name: "Entrada al barranco",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
-        nextPortal: [
+        visibilities: [
           {
-            visible: "false",
-            position: "3 1.7 2.2",
-            animation: "",
-            rotation: "",
-            titleStop: "",
+            visible1: "false",
+            visible2: "false",
+            visible3: "false",
+            visible4: "true",
           }
         ],
-        prevPortal: [
-          {
-            visible: "true",
-            position: "5 1.8 -2",
-            animation: "0 -45 0",
-            rotation: "0 -125 0",
-            titleStop: "Premios",
-          }
-        ]
       }
     ]
   }, {

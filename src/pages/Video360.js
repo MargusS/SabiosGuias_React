@@ -13,10 +13,8 @@ function Video360() {
   const navigate = useNavigate();
   let infoNextPortal = infoRoutes.filter(array => array.id == parseInt(route));
   infoNextPortal = infoNextPortal[0].stops.filter(array => array.idStop == parseInt(stop));
-  infoNextPortal = infoNextPortal[0]['nextPortal'][0];
-  let infoPrevPortal = infoRoutes.filter(array => array.id == parseInt(route));
-  infoPrevPortal = infoPrevPortal[0].stops.filter(array => array.idStop == parseInt(stop));
-  infoPrevPortal = infoPrevPortal[0]['prevPortal'][0];
+  infoNextPortal = infoNextPortal[0]['visibilities'][0];
+
 
   useEffect(() => {
     setVideoActive();
@@ -54,10 +52,24 @@ function Video360() {
             <a-text value="Oficina" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
+        <a-entity visible={infoNextPortal['visible1']} position="-3.75 -3 -1" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          <Entity primitive="a-circle" scale="0.95 0.95 0.95" color="white" />
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Oficina" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
 
-        <a-entity visible="true" position="-1.25 -3 -1" rotation="-90 90 -90">
+        <a-entity position="-1.25 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
           <Entity primitive="a-circle" color="black" events={{ mouseenter: (e) => handleClick(2) }} />
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Gofio" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+        <a-entity visible={infoNextPortal['visible2']} position="-1.25 -3 -1" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          <Entity primitive="a-circle" color="white" />
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Gofio" width="3.5" color="black" align="center"></a-text>
           </a-plane>
@@ -70,10 +82,24 @@ function Video360() {
             <a-text value="Premios" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
+        <a-entity visible={infoNextPortal['visible3']} position="1.25 -3 -1" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          <Entity primitive="a-circle" color="white" />
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Premios" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
 
         <a-entity visible="true" position="3.75 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
           {<Entity primitive="a-circle" color="black" events={{ mouseenter: (e) => handleClick(4) }} />}
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+        <a-entity visible={infoNextPortal['visible4']} position="3.75 -3 -1" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          {<Entity primitive="a-circle" color="white" />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
           </a-plane>
