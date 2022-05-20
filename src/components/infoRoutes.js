@@ -57,19 +57,10 @@ export const infoRoutes = [
             visible2: "false",
             visible3: "false",
             visible4: "false",
-          }
-        ],
-        prevPortal: [
-          {
-            visible: "false",
-            position: "",
-            animation: "",
-            rotation: "",
-            titleStop: "",
-            event: "collide"
+            visible5: "false",
+            visible6: "false"
           }
         ]
-
       }, {
         idStop: 2,
         name: "Gofio",
@@ -82,16 +73,8 @@ export const infoRoutes = [
             visible2: "true",
             visible3: "false",
             visible4: "false",
-          }
-        ],
-        prevPortal: [
-          {
-            visible: "true",
-            position: "5 1.8 -2",
-            animation: "0 -45 0",
-            rotation: "0 -125 0",
-            titleStop: "Juan Rejon",
-            event: "mouseenter"
+            visible5: "false",
+            visible6: "false"
           }
         ]
       }, {
@@ -106,6 +89,8 @@ export const infoRoutes = [
             visible2: "false",
             visible3: "true",
             visible4: "false",
+            visible5: "false",
+            visible6: "false"
           }
         ],
       }, {
@@ -120,6 +105,40 @@ export const infoRoutes = [
             visible2: "false",
             visible3: "false",
             visible4: "true",
+            visible5: "false",
+            visible6: "false"
+          }
+        ],
+      }, {
+        idStop: 8,
+        name: "Camino",
+        description: "",
+        video: "",
+        location: [28.148989336012654, -15.42077263372809],
+        visibilities: [
+          {
+            visible1: "false",
+            visible2: "false",
+            visible3: "false",
+            visible4: "false",
+            visible5: "true",
+            visible6: "false"
+          }
+        ],
+      }, {
+        idStop: 18,
+        name: "Cañas",
+        description: "",
+        video: "",
+        location: [28.148989336012654, -15.42077263372809],
+        visibilities: [
+          {
+            visible1: "false",
+            visible2: "false",
+            visible3: "false",
+            visible4: "false",
+            visible5: "false",
+            visible6: "true"
           }
         ],
       }

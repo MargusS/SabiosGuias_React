@@ -45,63 +45,93 @@ function Video360() {
           <a-cursor color="white"></a-cursor>
         </a-camera>
 
-        <a-entity visible="true" position="-3.75 -3 -1" rotation="-90 90 -90">
+        <a-entity visible="true" position="-3.75 -3 1.5" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          <Entity primitive="a-circle" scale="0.95 0.95 0.95" color="black" events={{ mouseenter: (e) => handleClick(1) }} />
+          <Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => handleClick(1) }} />
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Oficina" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
-        <a-entity visible={infoNextPortal['visible1']} position="-3.75 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={infoNextPortal['visible1']} position="-3.75 -3 1.5" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          <Entity primitive="a-circle" scale="0.95 0.95 0.95" color="white" />
+          <Entity primitive="a-circle" scale="0.95 0.95 0.95" color="rgb(16, 126, 115)" />
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Oficina" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
 
-        <a-entity position="-1.25 -3 -1" rotation="-90 90 -90">
+        <a-entity position="-3.75 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          <Entity primitive="a-circle" color="black" events={{ mouseenter: (e) => handleClick(2) }} />
+          <Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => handleClick(2) }} />
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Gofio" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
-        <a-entity visible={infoNextPortal['visible2']} position="-1.25 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={infoNextPortal['visible2']} position="-3.75 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          <Entity primitive="a-circle" color="white" />
+          <Entity primitive="a-circle" color="rgb(16, 126, 115)" />
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Gofio" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+
+        <a-entity visible="true" position="-1.25 -3 -1" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          <Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => handleClick(3) }} />
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Premios" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+        <a-entity visible={infoNextPortal['visible3']} position="-1.25 -3 -1" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          <Entity primitive="a-circle" color="rgb(16, 126, 115)" />
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Premios" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
 
         <a-entity visible="true" position="1.25 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          <Entity primitive="a-circle" color="black" events={{ mouseenter: (e) => handleClick(3) }} />
+          {<Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => handleClick(4) }} />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
-            <a-text value="Premios" width="3.5" color="black" align="center"></a-text>
+            <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
-        <a-entity visible={infoNextPortal['visible3']} position="1.25 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={infoNextPortal['visible4']} position="1.25 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          <Entity primitive="a-circle" color="white" />
+          {<Entity primitive="a-circle" color="rgb(16, 126, 115)" />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
-            <a-text value="Premios" width="3.5" color="black" align="center"></a-text>
+            <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
 
         <a-entity visible="true" position="3.75 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          {<Entity primitive="a-circle" color="black" events={{ mouseenter: (e) => handleClick(4) }} />}
+          {<Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => handleClick(8) }} />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
-            <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
+            <a-text value="Camino" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
-        <a-entity visible={infoNextPortal['visible4']} position="3.75 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={infoNextPortal['visible5']} position="3.75 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
-          {<Entity primitive="a-circle" color="white" />}
+          {<Entity primitive="a-circle" color="rgb(16, 126, 115)" />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
-            <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
+            <a-text value="Camino" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+
+        <a-entity visible="true" position="3.75 -3 1.5" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          {<Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => handleClick(18) }} />}
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="Final" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+        <a-entity visible={infoNextPortal['visible6']} position="3.75 -3 1.5" rotation="-90 90 -90">
+          <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
+          {<Entity primitive="a-circle" color="rgb(16, 126, 115)" />}
+          <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
+            <a-text value="FInal" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
 
