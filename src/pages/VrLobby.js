@@ -1,33 +1,26 @@
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 import './Video360.css';
-import { setVideoActive } from '../components/Video360Click.js';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import "aframe-event-set-component";
-import { infoRoutes } from "../components/infoRoutes";
 
 function VrLobby() {
-    const { route, stop } = useParams();
-    const [current, setCurrent] = useState(parseInt(stop));
+    const [page, setPage] = useState(false);
     const navigate = useNavigate();
-    //   let infoNextPortal = infoRoutes.filter(array => array.id == parseInt(route));
-    //   infoNextPortal = infoNextPortal[0].stops.filter(array => array.idStop == parseInt(stop));
-    //   infoNextPortal = infoNextPortal[0]['nextPortal'][0];
-    //   let infoPrevPortal = infoRoutes.filter(array => array.id == parseInt(route));
-    //   infoPrevPortal = infoPrevPortal[0].stops.filter(array => array.idStop == parseInt(stop));
-    //   infoPrevPortal = infoPrevPortal[0]['prevPortal'][0];
 
-
-    // useEffect(() => {
-    //     if (parseInt(current) !== parseInt(stop)) {
-    //         // navigate(`/video-360/${route}/${current}`);
-    //         window.location.reload();
-    //     }
-    // }, [current]);
+    useEffect(() => {
+        if (page) {
+            navigate(`/`);
+            window.location.reload();
+        }
+    }, [page]);
 
     const showVideo360 = (route, stop) => {
         navigate(`/video-360/${route}/${stop}`);
+    }
+    const goBack = () => {
+        setPage(true);
     }
 
     return (
@@ -67,23 +60,33 @@ function VrLobby() {
             <a-entity position="-2.5 1.8 -6" rotation="0 0 0"
                 animation="property: position; dir: alternate; to: -2.5 2 -6; loop: true; dur: 650">
                 <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="rgb(195, 214, 47)"></a-circle>
-                <Entity primitive="a-circle" color="white" events={{ mouseenter: (e) => showVideo360(2, 1) }} />
+                <Entity primitive="a-circle" color="rgb(16, 126, 115)" events={{ mouseenter: (e) => showVideo360(2, 1) }} />
                 <a-plane position="0 -.1 0.01" color="rgb(16, 126, 115)" width="1.4" height="0.3">
-                    <a-text value="Barranco de Azuaje" width="3.5" align="center"></a-text>
+                    <a-text value="Barranco de Azuaje" width="4.5" align="center"></a-text>
                 </a-plane>
             </a-entity>
-            <a-dodecahedron position="-2.5 0 -6.3" rotation="65 165 0" src="img/textura_piedra2.jpg" repeat="3 3 0"
+            <a-dodecahedron position="-2.5 -0.2 -6.3" rotation="65 165 0" src="img/textura_piedra2.jpg" repeat="3 3 0"
                 radius=".8"></a-dodecahedron>
 
-            <a-entity position="2.5 1.8 -6" rotation="0 -20 0"
+            <a-entity position="2.5 1.8 -6" rotation="0 0 0"
                 animation="property: position; dir: alternate; to: 2.5 2 -6; loop: true; dur: 650">
                 <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="rgb(195, 214, 47)"></a-circle>
-                <Entity primitive="a-circle" color="white" events={{ mouseenter: (e) => showVideo360(1, 1) }} />
+                <Entity primitive="a-circle" color="rgb(16, 126, 115)" events={{ mouseenter: (e) => showVideo360(1, 1) }} />
                 <a-plane position="0 -.1 0.01" color="rgb(16, 126, 115)" width="1.4" height="0.3">
-                    <a-text value="Castillo de la Luz " width="3.5" align="center"></a-text>
+                    <a-text value="Castillo de la Luz " width="4.5" align="center"></a-text>
                 </a-plane>
             </a-entity>
-            <a-dodecahedron position="2.5 0 -6.3" rotation="65 165 0" src="img/textura_piedra2.jpg" repeat="3 3 0"
+            <a-dodecahedron position="2.5 -0.2 -6.3" rotation="65 165 0" src="img/textura_piedra2.jpg" repeat="3 3 0"
+                radius=".8"></a-dodecahedron>
+
+            <a-entity position="0 1.3 5" rotation="0 180 0" animation="property: position; dir: alternate; to: 0 1.5 5; loop: true; dur: 650">
+                <a-circle position="0 0 0.02" scale=".57 .57 .57" color="rgb(16, 126, 115)"></a-circle>
+                <Entity primitive="a-circle" scale=".6 .6 .6" color="rgb(195, 214, 47)" events={{ mouseenter: () => goBack() }} />
+                <a-plane position="0 0 0.03" color="rgb(16, 126, 115)" width="1" height="0.3">
+                    <a-text value="Salir" width="3.5" align="center"></a-text>
+                </a-plane>
+            </a-entity>
+            <a-dodecahedron position="0 -0.2 5" rotation="65 165 0" src="img/textura_piedra2.jpg" repeat="3 3 0"
                 radius=".8"></a-dodecahedron>
 
             {/* <!-- suelo --> */}

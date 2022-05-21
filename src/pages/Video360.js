@@ -1,7 +1,6 @@
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 import './Video360.css';
-import { setVideoActive } from '../components/Video360Click.js';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import "aframe-event-set-component";
@@ -17,7 +16,7 @@ function Video360() {
 
 
   useEffect(() => {
-    setVideoActive();
+    // setVideoActive();
     if (parseInt(current) !== parseInt(stop)) {
       navigate(`/video-360/${route}/${current}`);
 
@@ -29,6 +28,9 @@ function Video360() {
     setCurrent(parseInt(next));
   }
 
+  const goBack = () => {
+    navigate('/vr-lobby');
+  }
 
 
   return (
@@ -102,6 +104,14 @@ function Video360() {
           {<Entity primitive="a-circle" color="white" />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Entrada al barranco" width="3.5" color="black" align="center"></a-text>
+          </a-plane>
+        </a-entity>
+
+        <a-entity position="0 -2 5" rotation="215 0 180">
+          <a-circle position="0 0 0.01" scale=".7 .7 .7" color="green"></a-circle>
+          {<Entity primitive="a-circle" scale=".75 .75 .75" color="white" events={{ mouseenter: () => goBack() }} />}
+          <a-plane position="0 0 0.05" color="green" width="1" height="0.3">
+            <a-text value="Volver" width="4.5" color="white" align="center"></a-text>
           </a-plane>
         </a-entity>
 
