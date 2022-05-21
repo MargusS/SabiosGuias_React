@@ -4,7 +4,11 @@ export const itemsMenu = [
         dir: "/all-routes"
     },
     {
-        name: "Conócenos",
+        name: "Experiencia VR",
+        dir: "/vr-lobby"
+    },
+    {
+        name: "RSS",
         dir: "/about-us"
     }
 ];
