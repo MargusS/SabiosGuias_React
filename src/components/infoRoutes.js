@@ -47,18 +47,16 @@ export const infoRoutes = [
     stops: [
       {
         idStop: 1,
-        name: "Juan Rejón",
+        name: "Oficina",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
-        nextPortal: [
+        visibilities: [
           {
-            visible: "true",
-            position: "-5 1.7 2.2",
-            animation: "0 150 0",
-            rotation: "0 90 0",
-            titleStop: "Castillo de la Luz",
-            event: "mouseenter"
+            visible1: "true",
+            visible2: "false",
+            visible3: "false",
+            visible4: "false",
           }
         ],
         prevPortal: [
@@ -74,18 +72,16 @@ export const infoRoutes = [
 
       }, {
         idStop: 2,
-        name: "Castillo de la Luz",
+        name: "Gofio",
         description: "",
         video: "",
         location: [28.148989336012654, -15.42077263372809],
-        nextPortal: [
+        visibilities: [
           {
-            visible: "true",
-            position: "-5 2 -1.5",
-            animation: "0 110 0",
-            rotation: "0 50 0",
-            titleStop: "Club Victoria",
-            event: `{{ mouseenter: (e) => handleClick(1) }}`
+            visible1: "false",
+            visible2: "true",
+            visible3: "false",
+            visible4: "false",
           }
         ],
         prevPortal: [
@@ -100,16 +96,32 @@ export const infoRoutes = [
         ]
       }, {
         idStop: 3,
-        name: "Club Victoria",
+        name: "Premios",
         description: "",
         video: "",
-        location: [28.148989336012654, -15.42077263372809]
+        location: [28.148989336012654, -15.42077263372809],
+        visibilities: [
+          {
+            visible1: "false",
+            visible2: "false",
+            visible3: "true",
+            visible4: "false",
+          }
+        ],
       }, {
         idStop: 4,
-        name: "Fábrica Escobio",
+        name: "Entrada al barranco",
         description: "",
         video: "",
-        location: [28.148989336012654, -15.42077263372809]
+        location: [28.148989336012654, -15.42077263372809],
+        visibilities: [
+          {
+            visible1: "false",
+            visible2: "false",
+            visible3: "false",
+            visible4: "true",
+          }
+        ],
       }
     ]
   }, {
