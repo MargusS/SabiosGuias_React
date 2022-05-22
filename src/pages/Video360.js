@@ -38,7 +38,7 @@ function Video360() {
     }
   };
   const stopClick = (currRoute, nextStop) => {
-    if (routeCheck(currRoute)) {
+    if (route == currRoute) {
       handleClick(nextStop);
     }
   };
