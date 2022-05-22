@@ -65,9 +65,16 @@ This design contain the logo of Sabios Guías Intérpretes and a burger botton t
 
 Moreover, the slider background is inspired on this fantastic tutorial: https://www.youtube.com/watch?v=oP5472drWiI&t=638s
 
+## VR Experience
+![Captura de pantalla (1936)](https://user-images.githubusercontent.com/56371021/169715042-9a62042a-e5b0-4ca6-999b-b44b77ccea5d.png)
+
+In order to create a more inmersive user experience we created a VR Lobby and VR routes. By navigating between routes and stops thanks to the VR Menus you can feel like you are inside the trips. 
+
 ## Built With
 
 * [Visual Studio Code](https://code.visualstudio.com/) - The Editor used in this project
+* [Aframe](https://aframe.io/) - The VR framework used for the project.
+* [Aframe-React](https://github.com/supermedium/aframe-react/blob/master/README.md) - The framework used to tie together Aframe and React.
 * [React](https://reactjs.org/) - React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
 * [Leaflet](https://leafletjs.com/) - an open-source JavaScript library for mobile-friendly interactive maps.
 * [react-leaflet](https://react-leaflet.js.org/) - React-Leaflet uses ⚛️ React's lifecycle methods to call the relevant Leaflet handlers, which has a few consequences.
