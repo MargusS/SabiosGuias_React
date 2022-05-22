@@ -59,8 +59,8 @@ function Video360() {
         </a-camera>
         {/* Display de la información */}
         <a-entity visible={routeCheck(1)} position="0 1.6 -5" rotation="0 0 0">
-          <a-plane position="0 0 0.05" color="white" width="3.8" height="2">
-            <a-text value={infoStop[stop - 1]['info']} width="3.5" color="black" align="center"></a-text>
+          <a-plane position="0 0 0.05" color="rgb(16, 126, 115)" width="3.8" height="2">
+            <a-text value={infoStop[stop - 1]['info']} width="3.5" color="white" align="center"></a-text>
           </a-plane>
         </a-entity>
         {/* Paradas de la ruta 1  */}
@@ -201,9 +201,9 @@ function Video360() {
         </a-entity>
 
         <a-entity position="0 -2 5" rotation="215 0 180">
-          <a-circle position="0 0 0.01" scale=".7 .7 .7" color="green"></a-circle>
+          <a-circle position="0 0 0.01" scale=".7 .7 .7" color="rgb(16, 126, 115)"></a-circle>
           {<Entity primitive="a-circle" scale=".75 .75 .75" color="white" events={{ mouseenter: () => goBack() }} />}
-          <a-plane position="0 0 0.05" color="green" width="1" height="0.3">
+          <a-plane position="0 0 0.05" color="rgb(16, 126, 115)" width="1" height="0.3">
             <a-text value="Volver" width="4.5" color="white" align="center"></a-text>
           </a-plane>
         </a-entity>

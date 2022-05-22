@@ -72,7 +72,7 @@ function VrLobby() {
                 <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="rgb(195, 214, 47)"></a-circle>
                 <Entity primitive="a-circle" color="rgb(16, 126, 115)" events={{ mouseenter: (e) => showVideo360(1, 1) }} />
                 <a-plane position="0 -.1 0.01" color="rgb(16, 126, 115)" width="1.4" height="0.3">
-                    <a-text value="Castillo de la Luz " width="4.5" align="center"></a-text>
+                    <a-text value="Inmersion Linguistica" width="4.5" align="center"></a-text>
                 </a-plane>
             </a-entity>
             <a-dodecahedron position="2.5 -0.2 -6.3" rotation="65 165 0" src="img/textura_piedra2.jpg" repeat="3 3 0"
