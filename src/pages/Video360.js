@@ -64,14 +64,14 @@ function Video360() {
           </a-plane>
         </a-entity>
         {/* Paradas de la ruta 1  */}
-        <a-entity visible={routeCheck(1)} position="-3.85 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={routeCheck(1)} position="-3.65 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
           {<Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => stopClick(1, 1) }} />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Natalia Sosa Ayala" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
-        <a-entity visible={infoNextPortal['visible11']} position="-3.85 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={infoNextPortal['visible11']} position="-3.65 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
           {<Entity primitive="a-circle" color="rgb(16, 126, 115)" />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
@@ -94,14 +94,14 @@ function Video360() {
           </a-plane>
         </a-entity>
 
-        <a-entity visible={routeCheck(1)} position="3.85 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={routeCheck(1)} position="3.65 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
           {<Entity primitive="a-circle" color="rgb(195, 214, 47)" events={{ mouseenter: (e) => stopClick(1, 3) }} />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
             <a-text value="Benito Perez Galdos" width="3.5" color="black" align="center"></a-text>
           </a-plane>
         </a-entity>
-        <a-entity visible={infoNextPortal['visible13']} position="3.85 -3 -1" rotation="-90 90 -90">
+        <a-entity visible={infoNextPortal['visible13']} position="3.65 -3 -1" rotation="-90 90 -90">
           <a-circle position="0 0 -0.01" scale="1.05 1.05 1.05" color="white"></a-circle>
           {<Entity primitive="a-circle" color="rgb(16, 126, 115)" />}
           <a-plane position="0 0 0.05" color="white" width="1.4" height="0.3">
