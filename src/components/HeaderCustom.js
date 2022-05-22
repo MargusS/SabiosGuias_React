@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { itemsMenu } from "./itemsMenu";
 import { useNavigate } from "react-router-dom";
 import OverlayMenu from "./OverlayMenu";
-import variables from "../scss/layout/_customHeader.scss";
 
 export default function HeaderCustom() {
 
@@ -10,15 +9,6 @@ export default function HeaderCustom() {
   const [overlay, setOverlay] = useState(false);
 
   useEffect(() => {
-    // document.addEventListener("scroll", () => {
-    //   const scrollY = window.scrollY;
-    //   const headerMaxHeight = variables.headerMaxHeight * 16;
-    //   if (scrollY < headerMaxHeight / 2) {
-    //     document.getElementById("el").style.backgroundColor = "rgb(255,255,255,.8)";
-    //   } else {
-    //     document.getElementById("el").style.backgroundColor = "rgb(255,255,255)";
-    //   }
-    // });
     if (overlay) {
       document.getElementById("al").style.visibility = "visible";
       document.getElementById("el").style.visibility = "hidden";

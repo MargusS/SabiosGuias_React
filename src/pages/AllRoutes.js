@@ -17,7 +17,6 @@ export default function AllRoutes() {
   const showRoute = (r, index) => {
     return (
       <div key={index} className="all-routes-route-container" onClick={() => selectStop(r.id)}>
-        {/* <div className="all-routes-route-id" style={{ backgroundColor: r.color }}>{r.id}</div> */}
         <div className="all-routes-route-id">
           <h4 style={{ backgroundColor: r.color }}>{r.id}</h4>
         </div>

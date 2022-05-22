@@ -1,6 +1,5 @@
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
-import './Video360.css';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import "aframe-event-set-component";
