@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Mi canal de RSS</title>
+        <link>https://www.sabiosguiasinterpretes.com/</link>
+        <descripcion>Noticias de los Sabios Guías</descripcion>
+        <item>
+            <title>Travesía por un camino ancestral que hermana poblaciones</title>
+            <link>https://www.sabiosguiasinterpretes.com/travesia-por-un-camino-ancestral-que-hermana-poblaciones/</link>
+            <descripcion>La I Guía Insular Sabios Guías Intérpretes de Gran Canaria nos ha dado la oportunidad de intervenir en un territorio cargado de historia y de enorme valor patrimonial que, a pesar de contar con uno de los destinos turísticos más conocidos y prolíferos de la isla, sigue siendo una comarca ignota para la mayor parte de nuestra sociedad.</descripcion>
+        </item>
+        <item>
+            <title>Madre canaria bonita</title>
+            <link>https://www.sabiosguiasinterpretes.com/madre-canaria-bonita/</link>
+            <descripcion>La madre isleña se ha caracterizado por su cariño y suavidad de carácter cuya máxima expresión de “mi niño o niña” ha definido una forma de ser canario.</descripcion>
+        </item>
+    </channel>
+</rss>

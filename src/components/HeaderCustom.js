@@ -41,6 +41,9 @@ export default function HeaderCustom() {
             {
               itemsMenu.map(showItems)
             }
+            <a type="application/rss+xml" href="/rss.xml">
+              <h3>RSS</h3>
+            </a>
           </div>
         </div>
       </div>
