@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import "aframe-event-set-component";
 import { infoRoutes } from "../components/infoRoutes";
+import { Helmet } from 'react-helmet';
 
 function Video360() {
   const { route, stop } = useParams();
@@ -47,8 +48,11 @@ function Video360() {
 
 
   return (
-    <div className="my-container">
 
+    <div className="my-container">
+      <Helmet>
+        <title>Sabios Guias | VR Route</title>
+      </Helmet>
       <Scene cursor={{ rayOrigin: "mouse" }}>
         <a-assets>
           <video id="vid" loop={true} src={`/video/Route-${route}/Route-${route}-Stop-${current}.mp4`} autoPlay={true} > </video>

@@ -8,6 +8,7 @@ import { infoSabios } from "../components/infoSabios";
 import FooterCustom from "../components/FooterCustom";
 import HeaderCustom from "../components/HeaderCustom";
 import "../css/app.css";
+import { Helmet } from 'react-helmet';
 
 export default function RouteDetail() {
   let { id } = useParams();
@@ -43,6 +44,9 @@ export default function RouteDetail() {
 
   return (
     <>
+      <Helmet>
+        <title>Sabios Guias | Details</title>
+      </Helmet>
       <ScrollToTop />
       <HeaderCustom />
       <div id="ul" className="route-detail-outer-container">

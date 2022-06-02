@@ -6,6 +6,7 @@ import FooterCustom from "../components/FooterCustom";
 import HeaderCustom from "../components/HeaderCustom";
 import MobileBg from "../components/MobileBg";
 import "../css/app.css";
+import { Helmet } from 'react-helmet';
 
 export default function AllRoutes() {
   const navigate = useNavigate();
@@ -30,6 +31,9 @@ export default function AllRoutes() {
 
   return (
     <>
+      <Helmet>
+        <title>Sabios Guias | Routes</title>
+      </Helmet>
       <ScrollToTop />
       <HeaderCustom />
       <div id="ul" className="all-routes-container">

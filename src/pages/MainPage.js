@@ -6,12 +6,16 @@ import InfoSlider from "../components/InfoSlider";
 import ScrollToTop from "../components/ScrollToTop";
 import MobileBg from "../components/MobileBg";
 import "../css/app.css";
+import { Helmet } from 'react-helmet';
 
 
 export default function MainPage() {
 
     return (
         <>
+            <Helmet>
+                <title>Sabios Guias | Home</title>
+            </Helmet>
             <ScrollToTop />
             <HeaderCustom />
             <div id="ul" className="section">

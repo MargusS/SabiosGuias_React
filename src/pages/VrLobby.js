@@ -3,6 +3,7 @@ import { Entity, Scene } from 'aframe-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "aframe-event-set-component";
+import { Helmet } from 'react-helmet';
 
 function VrLobby() {
     const [page, setPage] = useState(false);
@@ -24,6 +25,9 @@ function VrLobby() {
 
     return (
         <Scene cursor={{ rayOrigin: "mouse" }}>
+            <Helmet>
+                <title>Sabios Guias | VR Lobby</title>
+            </Helmet>
             <a-camera>
                 <a-cursor color="white"></a-cursor>
             </a-camera>
